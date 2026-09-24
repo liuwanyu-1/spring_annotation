@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="schoolAddress" class="lwy.study.spring.pojo.Address"
+          scope="prototype">
+        <property name="city" value="大庆"/>
+        <property name="street" value="新风路5号"/>
+    </bean>
+
+    <bean id="teacher" class="lwy.study.spring.pojo.Teacher"
+          scope="prototype">
+        <property name="sid" value="1002"/>
+        <property name="sname" value="张翠山"/>
+        <property name="sgender" value="男"/>
+        <property name="sage" value="30"/>
+        <property name="schoolAddress" ref="schoolAddress"/>
+    </bean>
+
+</beans>
